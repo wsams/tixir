@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  app:
+    image: wsams/wixir:latest
+    ports:
+      - 4000:4000
+    volumes:
+      - ./app:/app
+  db:
+    image: postgres:11.5
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
