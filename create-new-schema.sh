@@ -17,3 +17,4 @@ fields=$3
 
 docker-compose run --rm -v $(pwd)/app:/app app bash \
     -c "mix phx.gen.schema ${schema} ${tablename} ${fields}"
+
