@@ -40,7 +40,7 @@ defmodule AppWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_app_key",
-    signing_salt: "affOhZyd"
+    signing_salt: "GFCzzlf0"
 
   plug AppWeb.Router
 end

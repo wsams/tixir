@@ -6,7 +6,6 @@ defmodule App.Trackable do
     field :name, :string
     field :notes, :string
     field :start, :naive_datetime
-    field :state, :integer
 
     timestamps()
   end
@@ -14,7 +13,7 @@ defmodule App.Trackable do
   @doc false
   def changeset(trackable, attrs) do
     trackable
-    |> cast(attrs, [:name, :notes, :start, :state])
-    |> validate_required([:name, :notes, :start, :state])
+    |> cast(attrs, [:name, :notes, :start])
+    |> validate_required([:name, :notes, :start])
   end
 end

@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :app, App.Repo,
-  username: "tixir",
-  password: "tixir",
-  database: "tixir",
-  hostname: "db",
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  hostname: System.get_env("DB_HOSTNAME"),
   show_sensitive_data_on_connection_error: false,
   pool_size: 10
 
